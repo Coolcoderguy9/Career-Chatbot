@@ -1,1 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+<include src="jobs.aiml"/>
 
+<!-- Define initial category for starting the conversation -->
+<category>
+    <pattern>START</pattern>
+    <template>
+        Welcome to the career recommendation bot. Let's find the perfect career for you! Are you ready to get started? (Yes/No)
+        <reply>
+            <text>Yes</text>
+            <postback>READY</postback>
+        </reply>
+        <reply>
+            <text>No</text>
+            <postback>NOTREADY</postback>
+        </reply>
+    </template>
+</category>
+
+
+<!-- Category for handling response to readiness question -->
+<category>
+    <pattern>READY</pattern>
+    <template>
+        Great! Let's begin. Are you analytical and enjoy problem-solving? (Yes/No)
+        <reply>
+            <text>Yes</text>
+            <postback>ANALYTIC</postback>
+        </reply>
+        <reply>
+            <text>No</text>
+            <postback>NOTANALYTIC</postback>
+        </reply>
+    </template>
+</category>
+
+
+<category>
+  <pattern>NOTREADY</pattern>
+  <template>
+    No problem! Whenever you're ready, just say "START" to begin the career assessment.
+  </template>
+</category>
+
+<!-- Categories for determining personality and interests -->
+<category>
+    <pattern>ANALYTIC</pattern>
+    <template>
+        Excellent! Do you prefer working with numbers and data? (Yes/No)
+        <reply>
+            <text>Yes</text>
+            <postback>DATAANALYST</postback>
+        </reply>
+        <reply>
+            <text>No</text>
+            <postback>NOTNUMBERSDATA</postback>
+        </reply>
+    </template>
+</category>
+
+
+<category>
+    <pattern>NOTANALYTIC</pattern>
+    <template>
+        Got it. Are you more creative and enjoy designing user experiences? (Yes/No)
+        <reply>
+            <text>Yes</text>
+            <postback>CREATIVE</postback>
+        </reply>
+        <reply>
+            <text>No</text>
+            <postback>NOTCREATIVE</postback>
+        </reply>
+    </template>
+</category>
+
+<category>
+    <pattern>CREATIVE</pattern>
+    <template>
+        Great! Do you enjoy working with visual elements and graphics? (Yes/No)
+        <reply>
+            <text>Yes</text>
+            <postback>UX</postback>
+        </reply>
+        <reply>
+            <text>No</text>
+            <postback>NOTCREATIVE</postback>
+        </reply>
+    </template>
+</category>
+
+<category>
+    <pattern>NOTCREATIVE</pattern>
+    <template>
+        Okay. Are you detail-oriented and interested in cybersecurity? (Yes/No)
+        <reply>
+            <text>Yes</text>
+            <postback>CYBERSEC</postback>
+        </reply>
+        <reply>
+            <text>No</text>
+            <postback>NOTCYBERSEC</postback>
+        </reply>
+    </template>
+</category>
+
+
+<category>
+    <pattern>NOTNUMBERSDATA</pattern>
+    <template>
+        Okay. Are you organized and enjoy coordinating teams and projects? (Yes/No)
+        <reply>
+            <text>Yes</text>
+            <postback>PROJECTMANAGER</postback>
+        </reply>
+        <reply>
+            <text>No</text>
+            <postback>NOTORGANIZED</postback>
+        </reply>
+    </template>
+</category>
+
+
+<category>
+    <pattern>NOTORGANIZED</pattern>
+    <template>
+        Okay. Are you detail-oriented and interested in cybersecurity? (Yes/No)
+        <reply>
+            <text>Yes</text>
+            <postback>CYBERSEC</postback>
+        </reply>
+        <reply>
+            <text>No</text>
+            <postback>NOTCYBERSEC</postback>
+        </reply>
+    </template>
+</category>
+
+
+<category>
+    <pattern>NOTCYBERSEC</pattern>
+    <template>
+        Do you enjoy coding and developing software applications? (Yes/No)
+        <reply>
+            <text>Yes</text>
+            <postback>CODE</postback>
+        </reply>
+        <reply>
+            <text>No</text>
+            <postback>NOTCODE</postback>
+        </reply>
+    </template>
+</category>
+
+
+
+<category>
+    <pattern>NOTCODE</pattern>
+    <template>
+        Is user experience design and improving user interfaces appealing to you? (Yes/No)
+        <reply>
+            <text>Yes</text>
+            <postback>UX</postback>
+        </reply>
+        <reply>
+            <text>No</text>
+            <postback>NOTUX</postback>
+        </reply>
+    </template>
+</category>
+
+
+
+<category>
+  <pattern>NOTUX</pattern>
+  <template>
+    It seems like none of the provided options match your interests perfectly. Feel free to explore other career paths or let me know if you have any other questions!
+  </template>
+</category>
+
+<include src="udc.aiml"/>
+
+</aiml>

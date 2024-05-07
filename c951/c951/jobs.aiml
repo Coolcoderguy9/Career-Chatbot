@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+<category>
+  <pattern>DATAANALYST</pattern>
+  <template>
+    Sounds like you might enjoy a career as a Data Scientist! Data scientists use analytical skills to analyze data and extract insights.
+  </template>
+</category>
+
+<category>
+  <pattern>PROJECTMANAGER</pattern>
+  <template>
+    It seems like Project Management might be a good fit for you! Project managers oversee projects and ensure they are completed on time and within budget.
+  </template>
+</category>
+
+<category>
+  <pattern>CYBERSEC</pattern>
+  <template>
+    Cybersecurity Analyst could be a great career choice for you! Cybersecurity analysts protect computer systems and networks from cyber threats.
+  </template>
+</category>
+
+<category>
+  <pattern>CODE</pattern>
+  <template>
+    Software Development might be the right path for you! Software developers design, develop, and maintain software applications.
+  </template>
+</category>
+
+<category>
+  <pattern>UX</pattern>
+  <template>
+    You might excel as a User Experience (UX) Designer! UX designers focus on enhancing user satisfaction by improving the usability and accessibility of products.
+  </template>
+</category>
+	
+</aiml>
